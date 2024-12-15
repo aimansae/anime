@@ -1,19 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anime App
+
+A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically.
+ 
+ Please find the deployed version [here](https://anime-blue.vercel.app/?vercelToolbarCode=uUq8TXi4-wjm1RG)
+## Features
+
+- Fetch and display anime data from an external API.
+- Modern user interface styled with Tailwind CSS.
+- Built with TypeScript for type safety and better developer experience.
+- Utilizes Next.js Server Actions for efficient data fetching.
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/aimansae/anime
+cd anime-app
+npm install
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
