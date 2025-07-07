@@ -26,10 +26,10 @@ const AnimeCard = ({ anime, index }: AnimeDataTypes) => {
       viewport={{ amount: 0 }}
       className="max-w-sm rounded relative w-full"
     >
-      <div className="relative w-full h-[37vh]">
+      <div className="relative w-full aspect-square">
         <Image
           fill
-          className="rounded-xl hover:opacity-40 cursor-pointer"
+          className="object-fill rounded-xl hover:opacity-40 cursor-pointer"
           src={`https://shikimori.one/${anime.image.original}`}
           alt={anime.name}
         />

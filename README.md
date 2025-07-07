@@ -1,8 +1,27 @@
 # Anime App
 
 A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically.
- 
- Please find the deployed version [here](https://anime-blue.vercel.app/?vercelToolbarCode=uUq8TXi4-wjm1RG)
+
+
+![Anime Project Preview](public/images/amIResponsive.png)
+
+Please find the deployed version [here](https://anime-blue.vercel.app/?vercelToolbarCode=uUq8TXi4-wjm1RG)
+
+Please find my Github Repository [here](https://github.com/aimansae?tab=repositories&q=anime&type=&language=&sort=)
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [What I Learned](#what-i-learned)
+- [Challenges](#challenges)
+- [Technologies Used](#technologies-used)
+- [Repository Setup](#repository-setup)
+- [Deployment on Vercel](#deployment-on-vercel)
+- [Future Features](#future-features)
+- [Credits](#credits)
+
+
 ## Features
 
 - Fetch and display anime data from an external API.
@@ -10,32 +29,55 @@ A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
 - Built with TypeScript for type safety and better developer experience.
 - Utilizes Next.js Server Actions for efficient data fetching.
 
-## Getting Started
+## Repository Setup
 
-First, clone the repository and install dependencies:
+- Go to [GitHub](https://github.com/)
+- Click New Repository
+- Name your project
+
+In VS Code terminal:
 
 ```bash
-git clone https://github.com/aimansae/anime
-cd anime-app
-npm install
+git init
+git remote add origin https://github.com/YOUR_USERNAME/react-calculator.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
 ```
+
+Run npm run dev 
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What I learned
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- How to use Server Actions in Next.js App Router.
+- Better integration of Tailwind CSS and utility-first styling.
+- Stronger understanding of TypeScript in React/Next projects.
+- How to achieve infinite scroll and load functionality
 
-## Learn More
+## Challenges
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Handling loading and error states gracefully.
+- Ensuring type safety while consuming external APIs.
+- Managing server-client transitions in the new Next.js architecture.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Technologies Used
+- [Next.js App router](https://nextjs.org/docs/app) 
+- [TypeScript](https://nextjs.org/docs/pages/api-reference/config/typescript)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
+- [Shikimori  Anime API](https://shikimori.one/)
+- [Vercel](https://vercel.com/) (for deployment)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Search and filter functionality.
+- Anime details modal or separate page.
+- Dark mode support.
+
+# Credits
+
+- [Code with Mosh](https://codewithmosh.com/)
+- [Stack Overflow](https://stackoverflow.com/)
