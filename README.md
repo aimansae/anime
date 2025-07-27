@@ -1,6 +1,6 @@
 # Anime App
 
-A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically,coded along with JavascriptMastery(https://www.youtube.com/@javascriptmastery).
+A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically,coded along with [JavascriptMastery](https://www.youtube.com/@javascriptmastery).
 
 
 ![Anime Project Preview](public/images/amIResponsive.png)
@@ -110,8 +110,8 @@ This gave a smooth staggered animation using delay in MotionDiv.
 
 ## Future Features
 
-- Search and filter functionality.
-- Anime details modal or separate page.
+- Search and filter functionality through the anime.
+- Create a separated anime detail page 
 - Dark mode support.
 
 # Credits
