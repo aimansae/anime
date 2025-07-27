@@ -1,6 +1,6 @@
 # Anime App
 
-A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically.
+A simple anime app built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This app uses **Server Actions** to fetch and display data dynamically,coded along with JavascriptMastery(https://www.youtube.com/@javascriptmastery).
 
 
 ![Anime Project Preview](public/images/amIResponsive.png)
@@ -58,11 +58,48 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Challenges
 
+- Implementing infinite scroll required careful handling of the `IntersectionObserver` and dynamic API requests. I iterated a few times before getting the experience smooth across devices, .
 
-- Handling loading and error states gracefully.
-- Ensuring type safety while consuming external APIs.
-- Managing server-client transitions in the new Next.js architecture.
+- Managing the balance between client-side rendering and Server Actions was tricky. Initially, I ran into hydration mismatches. To fix this, I separated the layout into server and client components with better clarity.
 
+- Understanding where and how to run server-side logic in the new App Router took some trial and error:
+In app/page.tsx, I used a getAnime server action to fetch the anime list directly. This kept my UI component clean and focused purely on rendering.
+
+```bash
+export const getAnime = async () => {
+  const res = await fetch("https://shikimori.one/api/animes", {
+    headers: { Accept: "application/json" },
+    next: { revalidate: 60 }, // ISR
+  });
+  return res.json();
+};
+```
+I learned that using next: { revalidate: 60 } enables Incremental Static Regeneration, improving performance while still updating data every minute.
+
+- Grid Layout and Image Handling in AnimeCard.tsx:
+I used Tailwind’s utility classes (grid, grid-cols-1 md:grid-cols-2 lg:grid-cols-4) to build a responsive image grid.
+Each card uses aspect-square to ensure uniform image sizing across rows. Inside the AnimeCard component:
+
+```bash
+<div className="relative w-full aspect-square">
+  <Image
+    fill
+    className="object-fill rounded-xl hover:opacity-40 cursor-pointer"
+    src={`https://shikimori.one/${anime.image.original}`}
+    alt={anime.name}
+  />
+</div>
+```
+
+I had to experiment with object-fit, aspect-ratio, and responsive image props to maintain visual consistency. Image fill + aspect-square gave the best result.
+
+- Animation Timing with Framer Motion:
+I wanted cards to fade in sequentially for a better user experience. I calculated delays in batches:
+
+const batchDelay = Math.floor(index / 8) * 2.5; // Each row adds 2.5s
+const itemDelay = (index % 8) * 0.25; // Each item in row adds 0.25s
+
+This gave a smooth staggered animation using delay in MotionDiv.
 
 ## Technologies Used
 - [Next.js App router](https://nextjs.org/docs/app) 
@@ -79,5 +116,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # Credits
 
-- [Code with Mosh](https://codewithmosh.com/)
+- [Js Mastery](https://www.youtube.com/watch?v=FKZAXFjxlJI)
 - [Stack Overflow](https://stackoverflow.com/)
